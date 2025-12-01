@@ -1,6 +1,6 @@
 # Course :: TDD with .NET C#
 * TDD cycle
-  * Red -> Grren -> Refactor
+  * Red -> Green -> Refactor
 * Working with .NET C#
   * Developer REST API
 * AI-assistant coding
