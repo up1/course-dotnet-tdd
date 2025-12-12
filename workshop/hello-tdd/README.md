@@ -8,6 +8,11 @@
 $dotnet new webapi -n ApiProject
 ```
 
+Add partial class in file `Program.cs`
+```
+public partial class Program { }
+```
+
 ## Create XUnit prject
 ```
 $dotnet new xunit -n ApiProject.Tests
