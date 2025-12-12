@@ -67,3 +67,20 @@ public class BasicIntegrationTests : IClassFixture<WebApplicationFactory<Program
 ```
 $dotnet test ApiProject.Tests/ApiProject.Tests.csproj
 ```
+
+## Install code coverage
+```
+$dotnet add ApiProject.Tests/ApiProject.Tests.csproj package coverlet.collector
+```
+
+Run test with code coverage report
+```
+$dotnet test ApiProject.Tests/ApiProject.Tests.csproj --collect:"XPlat Code Coverage"
+```
+
+Generate code coverage report
+```
+$dotnet tool install -g dotnet-reportgenerator-globaltool
+
+$reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"CoverageReport" -reporttypes:Html
+```
