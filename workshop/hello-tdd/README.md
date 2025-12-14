@@ -89,3 +89,13 @@ $dotnet tool install -g dotnet-reportgenerator-globaltool
 
 $reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"CoverageReport" -reporttypes:Html
 ```
+
+## Working with Docker
+* [Reference](https://learn.microsoft.com/en-us/dotnet/core/docker/build-container)
+
+```
+$docker compose build
+$docker compose up -d
+```
+Access to REST API
+* http://localhost:8080/weatherforecast
