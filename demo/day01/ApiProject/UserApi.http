@@ -1,0 +1,41 @@
+### Register a new user - Success case
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+  "username": "somkiat",
+  "password": "1234"
+}
+
+###
+
+### Register a user with existing username - Conflict case
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+  "username": "somkiat",
+  "password": "1234"
+}
+
+###
+
+### Register a user with missing username - Bad Request
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": "1234"
+}
+
+###
+
+### Register a user with missing password - Bad Request
+POST http://localhost:5000/user
+Content-Type: application/json
+
+{
+  "username": "testuser",
+  "password": ""
+}
