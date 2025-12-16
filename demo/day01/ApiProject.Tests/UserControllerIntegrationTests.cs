@@ -23,7 +23,7 @@ public class UserControllerIntegrationTests : IClassFixture<WebApplicationFactor
     private HttpClient CreateClientWithInMemoryDb(Action<ApplicationDbContext>? seedAction = null)
     {
         var dbName = $"TestDb_{Guid.NewGuid()}";
-        
+
         var factory = _factory.WithWebHostBuilder(builder =>
         {
             builder.ConfigureServices(services =>

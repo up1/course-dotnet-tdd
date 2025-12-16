@@ -16,7 +16,7 @@ public class UserService : IUserService
     {
         // Check if username already exists
         var existingUser = await _userRepository.GetByUsernameAsync(username);
-        
+
         if (existingUser != null)
         {
             return (false, "Invalid input");

@@ -45,11 +45,11 @@ public class NumberControllerIntegrationTests : IClassFixture<WebApplicationFact
 
         // Assert
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);
-        
+
         var content = await response.Content.ReadAsStringAsync();
         var jsonDocument = JsonDocument.Parse(content);
         var data = jsonDocument.RootElement.GetProperty("data").GetString();
-        
+
         Assert.Equal("ABC5", data);
     }
 }
